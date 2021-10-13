@@ -1,9 +1,15 @@
 "use strict";
 exports.__esModule = true;
 var Punto_1 = require("./Punto");
+var Triangulo_1 = require("./Triangulo");
 var coord = new Punto_1.Punto(7, 5);
 coord.toString();
 console.log(coord.distanciaAlOrigen());
 console.log(coord.calcularDistancia(new Punto_1.Punto(4, 1)));
 console.log(coord.calcularCuadrante());
 console.log(coord.calcularMasCercano([new Punto_1.Punto(6, 6), new Punto_1.Punto(1, 1)]));
+var vertice1 = new Punto_1.Punto(1, 1);
+var vertice2 = new Punto_1.Punto(7, 1);
+var vertice3 = new Punto_1.Punto(7, 5);
+var triangulo = new Triangulo_1.Triangulo(vertice1, vertice2, vertice3);
+console.log(triangulo.calcularLongitudLados());
